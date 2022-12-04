@@ -6,7 +6,7 @@ export class FormularioCadastro extends Component {
       <form>
         <input type="text" placeholder="Título" />
 
-        <textarea placeholder="Escreva aqui..." />
+        <textarea rows={15} placeholder="Escreva aqui..." />
 
         <button>Criar Nota</button>
       </form>

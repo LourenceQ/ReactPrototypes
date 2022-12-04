@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { FormularioCadastro } from "./Components/FormularioCadastro";
-import { ListaDeNotas } from "./Components/ListaDeNotas";
+import { FormularioCadastro } from "./Components/FormularioCadastro.component";
+import { ListaDeNotas } from "./Components/ListaDeNotas.component";
 
 class App extends Component {
   render() {
