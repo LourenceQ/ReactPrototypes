@@ -3,13 +3,16 @@ import React, { useState } from "react";
 function FormularioCadastro() {
   const [nome, setNome] = useState("");
   const [sobrenome, setSobrenome] = useState("");
+  const [cpf, setCpf] = useState("");
+  const [promocoes, setPromocoes] = useState(true);
+  const [novidades, setNovidades] = useState(true);
 
   useState("");
   return (
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        console.log(nome, sobrenome);
+        console.log(nome, sobrenome, cpf, promocoes, novidades);
       }}
     >
       <label>Nome</label>
@@ -17,11 +20,7 @@ function FormularioCadastro() {
         type="text"
         value={nome}
         onChange={(event) => {
-          let tempNome = event.target.value;
-          if (tempNome.length >= 3) {
-            tempNome = tempNome.substring(0, 3);
-          }
-          setNome(tempNome);
+          setNome(event.target.value);
         }}
       ></input>
 
@@ -35,13 +34,29 @@ function FormularioCadastro() {
       ></input>
 
       <label>CPF</label>
-      <input type="text"></input>
+      <input
+        type="text"
+        value={cpf}
+        onChange={(event) => {
+          setCpf(event.target.value);
+        }}
+      ></input>
 
       <label>Promoçoes</label>
-      <input type="checkbox"></input>
+      <input
+        type="checkbox"
+        onChange={(event) => {
+          setPromocoes(event.target.checked);
+        }}
+      ></input>
 
       <label>Novidades</label>
-      <input type="checkbox"></input>
+      <input
+        type="checkbox"
+        onChange={(event) => {
+          setNovidades(event.target.checked);
+        }}
+      ></input>
 
       <button type="submit">Cadastrar</button>
     </form>
