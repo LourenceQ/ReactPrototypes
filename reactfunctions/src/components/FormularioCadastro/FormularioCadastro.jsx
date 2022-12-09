@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 
-function FormularioCadastro() {
+function FormularioCadastro({ aoEnviar, validarCpf }) {
   const [nome, setNome] = useState("");
   const [sobrenome, setSobrenome] = useState("");
   const [cpf, setCpf] = useState("");
   const [promocoes, setPromocoes] = useState(true);
   const [novidades, setNovidades] = useState(true);
 
-  useState("");
+  const [erros, setErros] = useState({ cpf: { valido: true, texto: "" } });
+
   return (
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        console.log(nome, sobrenome, cpf, promocoes, novidades);
+        aoEnviar({ nome, sobrenome, cpf, novidades, promocoes });
       }}
     >
       <label>Nome</label>
@@ -35,6 +36,11 @@ function FormularioCadastro() {
 
       <label>CPF</label>
       <input
+        onBlur={(event) => {
+          const ehValido = validarCpf(cpf);
+          setErros({ cpf: ehValido });
+        }}
+        error={!erros.cpf.valido}
         type="text"
         value={cpf}
         onChange={(event) => {
