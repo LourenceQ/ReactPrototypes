@@ -48,7 +48,7 @@ function App() {
         <TableBody>
           {colaboradores.map((c) => (
             <TableRow key={c.nomeColaborador}>
-              <TableCell style={{ fontSize: "20px" }}>{c.nomeColaborador}</TableCell>
+              <TableCell style={{ fontSize: "20px" , backgroundColor: "green"}}>{c.nomeColaborador}</TableCell>
               <TableCell style={{ fontSize: "20px" }}>{c.nomeLider}</TableCell>
             </TableRow>
           ))}
