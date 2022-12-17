@@ -1,5 +1,5 @@
 import React from "react";
-import Botao from "..";
+import Botao from "../Botao";
 
 class Formulario extends React.Component {
   render() {
@@ -17,10 +17,20 @@ class Formulario extends React.Component {
         </div>
         <div>
           <label htmlFor="tempo"> Tempo </label>
-          <input type="time" step="1" name="tempo" id="tarefa" min="00:00:00" max="01:00:00" required /> 
+          <input
+            type="time"
+            step="1"
+            name="tempo"
+            id="tarefa"
+            min="00:00:00"
+            max="01:00:00"
+            required
+          />
         </div>
         <Botao />
       </form>
     );
   }
 }
+
+export default Formulario;
