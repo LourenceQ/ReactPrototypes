@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
+import "./style.scss";
 
 class Botao extends React.Component {
-    render() {
-        return(
-            <button>Enviar</button>
-        )
-    }
+  render() {
+    return <button className="botao">Enviar</button>;
+  }
 }
 
 export default Botao;

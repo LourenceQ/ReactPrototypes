@@ -1,9 +1,9 @@
 import React from "react";
 
-import "./App.css";
-import Botao from "./components/Botao";
-import Formulario from "./components/Formulario";
-import Lista from "./components/Lista";
+import "../App.css";
+import Botao from "../components/Botao";
+import Formulario from "../components/Formulario";
+import Lista from "../components/Lista";
 
 function App() {
   return (
