@@ -25,7 +25,7 @@ describe("Requisições para api", () => {
     render(<App />);
     // expect(screen.findByText("saque")).toBeInTheDocument;
 
-    await screen.findByText("saque");
+    expect(await screen.findByText("saque")).ToBeInTheDocument;
     expect(screen.getByTestId("transacoes").children.length).toBe(2);
   });
 });
