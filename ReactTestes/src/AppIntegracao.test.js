@@ -1,15 +1,15 @@
 import React from "react";
 import api from "./api";
-import { render, sreen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import App from "./App";
 
 jest.mock("./api");
 
-describre("Requisições para api", () => {
+describe("Requisições para api", () => {
   it("Exibir lista de transações através da API", async () => {
     api.listaTransacoes.mockResolvedValue([
       {
-        valor: 10,
+        valor: "10",
         transacao: "saque",
         data: "10/08/2020",
         id: 1,
