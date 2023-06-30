@@ -1,8 +1,8 @@
 import React from "react";
 import style from "../Lista.module.scss"
+import { ITarefa } from "../../../types/tarefa";
 
-export default function Item(props: { tarefa: string; tempo: string }) {
-  const { tarefa, tempo } = props;
+export default function Item({ tarefa, tempo, selecionado, completado, id }: ITarefa) {
   return (
     <li className={style.item}>
       <h3>{tarefa}</h3>
