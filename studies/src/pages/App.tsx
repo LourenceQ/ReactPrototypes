@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../App.css";
 import Botao from "../components/Botao";
-import { Cronometro } from "../components/Cronometro";
+import { Cronometro } from "../components/Cronometro/date";
 import Formulario from "../components/Formulario";
 import Lista from "../components/Lista";
 import { ITarefa } from "../types/tarefa";
@@ -26,7 +26,7 @@ function App() {
         tarefas={tarefas}
         selecionaTarefa={selecionaTarefa}
       />
-      <Cronometro />
+      <Cronometro selecionado = { selecionado } />
     </div>
   );
 }
