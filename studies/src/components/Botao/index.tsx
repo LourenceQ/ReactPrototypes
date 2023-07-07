@@ -5,13 +5,13 @@ class Botao extends React.Component<
   any,
   any,
   {
-    type?: "button" | "submit" | "reset" | undefined;
+    type?: "button" | "submit" | "reset" | undefined, onCLick?: () => void;
   }
 > {
   render() {
-    const { type = "button" } = this.props;
+    const { type = "button", onClick } = this.props;
     return (
-      <button type={type} className={style.Botao}>
+      <button onClick={onClick} type={type} className={style.Botao}>
         {this.props.children}
       </button>
     );
