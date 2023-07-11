@@ -10,19 +10,26 @@ export default function Inicio() {
 
   return (
     <section>
+
       <h3 className={styles.titulo}>
         Recomendações da cozinha
       </h3>
+
       <div className={styles.recomendados}>
+
         {pratosRecomendados.map(item => (
           <div key={item.id} className={styles.recomendado}>
-            <div className={styles.recomendado_imagem}>
+            
+            <div className={styles.recomendado__imagem}>
               <img src={item.photo} alt={item.title} />
             </div>
-            <button className={styles.recomendado_botao}>
+
+            <button className={styles.recomendado__botao}>
               Ver mais
             </button>
+
           </div>
+
         ))}
       </div>
     </section>
