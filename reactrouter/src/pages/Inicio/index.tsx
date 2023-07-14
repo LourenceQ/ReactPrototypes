@@ -11,7 +11,6 @@ export default function Inicio() {
 
   return (
     <section>
-      <Menu />
       <h3 className={styles.titulo}>
         Recomendações da cozinha
       </h3>
