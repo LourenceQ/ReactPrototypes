@@ -7,7 +7,7 @@ export default function Menu() {
     label : 'Inicio',
     to: '/'
   }, {
-    label: 'Cardapio',
+    label: 'Cardápio',
     to: '/cardapio'
   }, {
     label: 'Sobre',
@@ -19,7 +19,7 @@ export default function Menu() {
       <Logo />
       <ul className={styles.menu__list}>
         {rotas.map((rota, index) => (
-          <li key={index} className={styles.menu__List}>
+          <li key={index} className={styles.menu__link}>
             <Link to={rota.to}> {rota.label} </Link>
           </li>
         ))}
