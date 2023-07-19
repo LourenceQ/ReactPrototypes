@@ -4,6 +4,7 @@ import PaginaPadrao from './components/PaginaPadrao';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Inicio from 'pages/Inicio';
 import Sobre from 'pages/Sobre';
+import Footer from 'components/Footer';
 
 
 export default function AppRouter() {
@@ -19,7 +20,7 @@ export default function AppRouter() {
             <Route path='sobre' element={<Sobre />} />
           </Route>
         </Routes>
-
+        <Footer />
       </Router>
     </main>
   );
